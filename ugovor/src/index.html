@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+    <title>Dapp</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="grid">
+      <div class="span-row-2">
+        <img src="images/mask.gif" class="logo-gif" />
+      </div>
+      <div class="title">
+        <h1>DAPP</h1>
+      </div>
+      <div class="subtitle">
+        <h3>Smart Contract</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="transfer">
+    <h2>Transfer</h2>
+    <form class="pure-form pure-form-stacked">
+        <fieldset>
+          <div class="grid-transfer">
+            <div>
+              <select id="posiljateljSelect" class="name" onchange="App.popuniPolja(); return false;">
+              </select>
+            </div>
+            <div>
+              <input class="address" placeholder="Owner" id="owner" readonly>
+            </div>
+            <div>
+              <input style="text-align:right" placeholder="Balance" id="balance" readonly>
+            </div>
+            <div >
+              <input style="text-align:right" placeholder="Amount (ETH)" id="amount">
+            </div>
+            <div>
+              <img src="images/ether.png" class="logo" />
+            </div>
+            <div>
+              <select id="primateljSelect" class="name" onchange="App.popuniPolja(); return false;">
+              </select>
+            </div>
+            <div>
+              <input class="address" placeholder="Recipient" id="recipient" readonly>
+            </div>
+            <div>
+            </div>
+            <div style="margin-left:160px">
+              <button type="submit" class="button-success pure-button" onclick="App.transakcija(); return false;">Send</button>
+            </div>
+            <div >
+              <button class="button-error pure-button" onclick="App.clearAll(); return false;">Clear</button>
+            </div>
+          </div>
+        </fieldset>
+    </form>
+
+    <div class="grid-table" style="margin-left:0px">
+      <div>
+        <h2>Active accounts</h2>
+        <table class="pure-table">
+          <thead>
+              <tr>
+                  <th style="text-align:right">No.</th>
+                  <th>Owner</th>
+                  <th>Nickname</th>
+                  <th>Adress</th>
+                  <th style="text-align:right">Balance</th>
+              </tr>
+          </thead>
+
+          <tbody id="racuniResults">
+          </tbody>
+
+      </table>
+      </div>
+      <div>
+        <h2>Transactions</h2>
+        <table class="pure-table">
+          <thead>
+              <tr>
+                  <!--<th style="text-align:right">No.</th>-->
+                  <th>Time</th>
+                  <th>From</th>
+                  <th>To</th>
+                  <th style="text-align:right">Amount</th>
+              </tr>
+          </thead>
+
+          <tbody id="transakcijeResults">
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.grid-transfer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+}
+
+.grid-table {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    grid-gap: 20px;
+}
+
+.span-row-2{
+  grid-row: span 2 / auto;
+  float: right;
+}
+
+.container {
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+}
+
+.title {
+  margin-top: -5px;
+  color: #5e464d;
+}
+
+.subtitle {
+  margin-top: -50px;
+  color: rgb(247, 134, 28);
+}
+
+.transfer {
+  padding-left: 40px;
+}
+
+.logo {
+  display: inline-block;
+  width: 50px;
+  height: 40px;
+  /*width: 128px;
+  height: 82px;
+  float: right;*/
+}
+
+.logo-gif {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  float: right;
+}
+
+h2 {
+  color: #5e464d;
+}
+
+body {
+
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+input, textarea {
+    font-family: 'Roboto Mono', monospace;
+}
+
+textarea {
+    width: 800px;
+    height: 200px;
+}
+
+table {
+  font-size:13px;
+}
+
+.name {
+    width: 400px;
+}
+
+.address {
+    width: 500px;
+}
+
+.button-success {
+    background: rgb(28, 184, 65);
+    color: white;
+}
+
+.button-error {
+    background: rgb(202, 60, 60);
+    color: white;
+}
